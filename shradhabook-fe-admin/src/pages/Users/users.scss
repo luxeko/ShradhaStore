@@ -1,0 +1,326 @@
+// ========== LIST USER CSS ==========
+.list-user {
+    height: 100vh;
+    padding: 20px;
+
+    .btn-add-user {
+        height: 6%;
+
+        a {
+            background-color: green;
+            padding: 6px 10px;
+            color: white;
+            display: inline-block;
+            border-radius: 0.5rem;
+            transition: linear 200ms;
+
+            &:hover {
+                transform: scale(102%);
+                box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+            }
+
+            div {
+                font-size: 1.7rem;
+                display: flex;
+                gap: 0.5rem;
+                align-items: center;
+                font-weight: bolder;
+            }
+        }
+    }
+
+    //
+    //.filter-user {
+    //    height: 5%;
+    //}
+
+    .table-list-user {
+        height: 80%;
+
+        div {
+            font-size: 1.6rem;
+        }
+
+        .cell-width-img {
+            display: flex;
+            align-items: center;
+
+            .cell-img {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                object-fit: cover;
+                margin-right: 20px;
+            }
+        }
+
+        .cell-action {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+
+            a {
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                cursor: pointer;
+                transition: ease-in-out 300ms;
+            }
+
+            .btn-view {
+                padding: 4px 8px;
+                border-radius: 0.5rem;
+                color: darkblue;
+                border: 1px dashed rgba(0, 0, 139, 0.595);
+
+                &:hover {
+                    background-color: rgba(0, 0, 139, 0.595);
+                    color: white;
+                }
+            }
+
+            .btn-delete {
+                padding: 4px 8px;
+                border-radius: 0.5rem;
+                color: crimson;
+                border: 1px dashed rgba(220, 20, 60, 0.595);
+
+                &:hover {
+                    background-color: rgba(220, 20, 60, 0.595);
+                    color: white;
+                }
+            }
+        }
+    }
+
+}
+
+// ========== DETAIL USER CSS ==========
+.detail-user {
+    height: 100vh;
+    padding: 20px;
+    font-size: 1.6rem;
+    min-height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-snap-margin-top: 8.5rem;
+    scroll-margin-top: 8.5rem;
+
+    &::-webkit-scrollbar {
+        width: 1rem;
+    }
+
+    &::-webkit-scrollbar-track {
+        background: #ffffff;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: #334155;
+        border-radius: 5rem;
+    }
+
+    .top {
+        gap: 20px;
+        display: flex;
+        margin-bottom: 20px;
+
+        .left {
+            padding: 1rem 2rem;
+            flex: 1;
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+            position: relative;
+            border-radius: 1rem;
+
+            .btn-edit {
+                border-radius: 0.5rem;
+                position: absolute;
+                top: 4px;
+                right: 4px;
+                padding: 6px 10px;
+                background-color: goldenrod;
+                color: white;
+                display: flex;
+                align-items: center;
+                gap: 0.5rem;
+                font-weight: bolder;
+                font-size: 1.6rem;
+                cursor: pointer;
+                transition: ease-in-out 100ms;
+
+                &:hover {
+                    transform: scale(102%);
+                    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+                }
+            }
+
+            .title {
+                margin-bottom: 40px;
+                font-size: 20px;
+                color: gray;
+            }
+
+            .item {
+                display: flex;
+                gap: 20px;
+
+                .item-img {
+                    width: 150px;
+                    height: 150px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+
+                .details {
+                    .item-title {
+                        margin-bottom: 15px;
+                    }
+
+                    .detail-item {
+                        margin-bottom: 10px;
+                        font-size: 14px;
+
+                        .item-key {
+                            font-weight: bold;
+                            color: #223143;
+                        }
+
+                        .item-value {
+                            font-weight: 500;
+                        }
+                    }
+                }
+            }
+        }
+
+        .right {
+            flex: 2;
+            border-radius: 1rem;
+        }
+    }
+
+    .bottom {
+        margin-bottom: 60px;
+    }
+}
+
+// ========== CREATE USER CSS ==========
+.create-user {
+    padding: 20px;
+    font-size: 1.6rem;
+
+    .top, .bottom {
+        box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+        border-radius: 1rem;
+        padding: 10px;
+        margin: 0 0 20px 0;
+        display: flex;
+        align-items: center;
+
+        .title {
+            font-size: 20px;
+            color: gray;
+            transition: linear 200ms;
+
+            &:first-child {
+                &:hover {
+                    color: #F65D4E;
+                }
+            }
+        }
+
+        .right {
+            flex: 3;
+
+            form {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 20px;
+                justify-content: space-around;
+                .form-input {
+                    width: 45%;
+                    position: relative;
+
+                    label {
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                    }
+
+                    input, select {
+                        outline: none;
+                        width: 100%;
+                        padding: 5px;
+                        border: none;
+                        border-bottom: 1px solid gray;
+                    }
+                    .show-password {
+                        position: absolute;
+                        top: 25px;
+                        right: 0;
+                    }
+                }
+
+                .from-btn {
+                    width: 100%;
+                    display: flex;
+                    justify-content: end;
+                    align-items: center;
+                    button {
+                        padding: 10px;
+                        color: white;
+                        border: none;
+                        cursor: pointer;
+                        border-radius: 0.5rem;
+                        font-size: 1.7rem;
+                        font-weight: bolder;
+                        transition: linear 200ms;
+                        margin-right: 20px;
+                        &:first-child {
+                            background-color: green;
+                        }
+                        &:last-child {
+                            background-color: #F65D4E;
+                        }
+                        &:hover {
+                            transform: scale(102%);
+                            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+                        }
+                    }
+                }
+            }
+        }
+
+        .left {
+            flex: 1;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            div {
+                height: 300px;
+                width: 300px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                img {
+                    width: 300px;
+                    height: 300px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+
+    .bottom {
+        gap: 30px;
+        display: flex;
+    }
+}
+
+.update-user {
+
+}

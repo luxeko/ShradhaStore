@@ -1,0 +1,14 @@
+.app-container {
+    display: flex;
+
+    .sidenav-container {
+        flex: 1;
+    }
+    .main-container {
+        flex: 6;
+        min-height: 100vh;
+        height: 100vh;
+        overflow-y: hidden;
+    }
+
+}
