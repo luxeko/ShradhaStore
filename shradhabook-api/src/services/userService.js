@@ -42,16 +42,18 @@ const deleteUser = async (userId) => {
 }
 const editUser = async (userId) => {
     try {
-        const user = db.users.findAll({
+        const user = await db.users.findOne({
             where: {
                 id: userId
             }
         })
+        console.log(user)
         return user
     } catch (error) {
         console.log("=> check error: ", error)
     }
 }
+
 const updateUser = async (userId, email, password, username) => {
     const hashPassword = bcryptPassword(password)
     try {

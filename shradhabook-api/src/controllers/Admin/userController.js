@@ -18,11 +18,7 @@ const handleDeleteUser = async (request, response) => {
 }
 const handleEditUser = async (request, response) => {
     const user = await userService.editUser(request.params.id)
-    let userData = {}
-    if (user && user.length > 0) {
-        userData = user[0];
-    }
-    return response.render("user-update.ejs", {userData});
+    return response.render("user-update.ejs", {user});
 }
 const handleUpdateUser = async (request, response) => {
     const userId = request.params.id
