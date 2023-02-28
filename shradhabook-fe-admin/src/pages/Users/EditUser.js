@@ -1,6 +1,6 @@
 import React from 'react';
 import './users.scss'
-const UpdateUser = () => {
+const EditUser = () => {
     return (
         <div className={`update-user`}>
             Edit user page
@@ -8,4 +8,4 @@ const UpdateUser = () => {
     );
 };
 
-export default UpdateUser;
+export default EditUser;
