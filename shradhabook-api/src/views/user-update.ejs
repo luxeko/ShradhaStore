@@ -18,7 +18,7 @@
             <form method="POST" action="/users/update/<%= user.id %>">
                 <div class="mb-3 col-6">
                     <label for="email" class="form-label">Email address</label>
-                    <input value="<%= user.email%>" type="email" name="email" class="form-control" id="email"
+                    <input value="<%= user.email %>" type="email" name="email" class="form-control" id="email"
                            aria-describedby="emailHelp">
                 </div>
                 <div class="col-6"></div>
@@ -29,7 +29,7 @@
                 <div class="col-6"></div>
                 <div class="mb-3 col-6">
                     <label for="username" class="form-label">Username</label>
-                    <input value="<%= user.username%>" type="text" name="username" class="form-control" id="username">
+                    <input value="<%= user.username %>" type="text" name="username" class="form-control" id="username">
                 </div>
                 <div class="col-12">
                     <button type="submit" class="btn btn-success">Update</button>
