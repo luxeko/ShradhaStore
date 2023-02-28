@@ -1,6 +1,6 @@
 @tailwind base;
 
-@layer basse {
+@layer base {
     body {
         @apply font-sora;
     }
