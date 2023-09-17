@@ -5,11 +5,11 @@ import jwt_decode from "jwt-decode";
 import {IoCloseSharp} from 'react-icons/io5'
 import {toast} from "react-toastify";
 import {useNavigate} from "react-router-dom";
-import {removeAllProdcut} from "../../redux/action/cartAction";
+import {removeAllProduct} from "../../redux/action/cartAction";
 import {connect, useSelector} from "react-redux";
 
 const Checkout = (props) => {
-    const {removeAllProdcut} = props
+    const {removeAllProduct} = props
     const account = useSelector(state => state.user.account);
     let userId = ''
     const [userInfo, setUserInfo] = useState({})
@@ -86,7 +86,7 @@ const Checkout = (props) => {
         //
         //     ]
         // }
-        removeAllProdcut();
+        removeAllProduct();
         navigate('/')
         toast.success('Order Success')
     }
@@ -252,7 +252,7 @@ const Checkout = (props) => {
 };
 const mapDispatchToProps = dispatch => {
     return {
-        removeAllProdcut: () => dispatch(removeAllProdcut())
+        removeAllProduct: () => dispatch(removeAllProduct())
     }
 }
 export default connect(null, mapDispatchToProps)(Checkout);

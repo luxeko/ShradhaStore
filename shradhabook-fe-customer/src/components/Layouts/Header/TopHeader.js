@@ -9,11 +9,10 @@ import {deleteLogout, getCountProductInWishList, getMyInfo} from "../../../servi
 import {toast} from "react-toastify";
 import {doLogout} from "../../../redux/action/userAction";
 import jwt_decode from "jwt-decode";
-import {removeAllProdcut} from "../../../redux/action/cartAction";
+import {removeAllProduct} from "../../../redux/action/cartAction";
 import * as moment from "moment/moment";
 
 const TopHeader = (props) => {
-
     const [showNavUser, setShowNavUser] = useState(false);
     const [avatar, setAvatar] = useState(null)
     const [cartCount, setCartCount] = useState(0)
@@ -84,7 +83,7 @@ const TopHeader = (props) => {
         let res = await deleteLogout();
         if (res.status === true) {
             dispatch(doLogout());
-            dispatch(removeAllProdcut());
+            dispatch(removeAllProduct());
             toast.success(res.message);
             navigate('/')
         }

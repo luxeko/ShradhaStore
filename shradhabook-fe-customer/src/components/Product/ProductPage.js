@@ -90,7 +90,7 @@ const ProductPage = (props,{doAddToCart}) => {
             await fetchListProducts(pageIndex)
         }
         fetchData();
-    }, [selectedPerPage, lowPrice, hightPrice,AuthorName, categoryName, name, selectedSort ])
+    }, [selectedPerPage, lowPrice, hightPrice,AuthorName, categoryName, name, selectedSort])
 
     const handleUpdatePrice = (e, data, activeThumb) => {
         if (!Array.isArray(data)) {
