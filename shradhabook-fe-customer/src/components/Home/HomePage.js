@@ -94,7 +94,6 @@ const HomePage = (props) => {
     }
 
     useEffect(() => {
-
         const fetchData = async () => {
             await fetchListCategories()
             await fetchListProductMostView()

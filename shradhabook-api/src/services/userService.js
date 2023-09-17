@@ -1,37 +1,49 @@
 import db from '../models/index'
 import authService from "./authService";
 import apiService from "./apiService";
+const { Op } = require("sequelize");
 
 const getListUser = async (page, limit) => {
     try {
-        const offset = (page - 1) * limit
-        const {count, rows} = await db.users.findAndCountAll({
-            offset: offset,
-            limit: limit,
-            attributes: ["id", "email", "username", "userAvatar", "gender", "birthday", "phoneNumber", "isCustomer", "createdAt", "updatedAt"],
+        const users = await db.users.findAll({
+            where: {
+                id: { [Op.notIn]: [1] }
+            },
         })
-        console.log(rows)
-        if (rows) {
-            const totalPage = Math.ceil(count/limit)
-            const data = {
-                totalRows: count,
-                totalPages: totalPage,
-                users: rows
-            }
-            return {
-                status: 'success',
-                message: '',
-                code: '200',
-                data: data
-            }
-        } else {
-            return {
-                status: 'failed',
-                message: 'Data Available',
-                code: '204',
-                data: []
-            }
+        return {
+            status: 'success',
+            message: '',
+            code: '200',
+            data: users
         }
+        // const offset = (page - 1) * limit
+        // const {count, rows} = await db.users.findAndCountAll({
+        //     offset: offset,
+        //     limit: limit,
+        //     attributes: ["id", "email", "username", "userAvatar", "gender", "birthday", "phoneNumber", "isCustomer", "createdAt", "updatedAt"],
+        // })
+        // console.log(rows)
+        // if (rows) {
+        //     const totalPage = Math.ceil(count / limit)
+        //     const data = {
+        //         totalRows: count,
+        //         totalPages: totalPage,
+        //         users: rows
+        //     }
+        //     return {
+        //         status: 'success',
+        //         message: '',
+        //         code: '200',
+        //         data: data
+        //     }
+        // } else {
+        //     return {
+        //         status: 'failed',
+        //         message: 'Data Available',
+        //         code: '204',
+        //         data: []
+        //     }
+        // }
     } catch (error) {
         console.log("=> check error: ", error)
         return {

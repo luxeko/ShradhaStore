@@ -61,7 +61,7 @@ const Cart = () => {
                                 <tbody>
                                 {
                                     listProduct.map((item, index) => (
-                                        <CartItem key={index} item={item} />
+                                        <CartItem key={index} item={item}/>
                                     ))
                                 }
                                 </tbody>
@@ -74,24 +74,24 @@ const Cart = () => {
                                 <div className={`w-full`}>
                                     <table className={`border-collapse w-full`}>
                                         <tbody className={`table-row-group align-middle`}>
-                                        <tr className={`cart_subtotal table-row border-b-[1px] border-borderColor `}>
-                                            <th className={`text-[18px] font-medium text-left break-all align-top py-4`}>Subtotal ({totalItem})</th>
-                                            <td className={`table-cell text-right clear-both py-4 break-all align-top font-medium`}>
-                                                $ {total}
-                                            </td>
-                                        </tr>
-                                        <tr className={`cart_subtotal table-row `}>
-                                            <th className={`text-[18px] font-medium text-left break-all align-top py-4`}>Total ({totalItem})</th>
-                                            <td className={`table-cell text-right clear-both py-4 break-all align-top`}>
-                                                <strong><span
-                                                    className={`text-[26px] font-medium text-lime-600`}>$ {total}</span></strong>
-                                            </td>
-                                        </tr>
+                                            <tr className={`cart_subtotal table-row border-b-[1px] border-borderColor `}>
+                                                <th className={`text-[18px] font-medium text-left break-all align-top py-4`}>Subtotal ({totalItem})</th>
+                                                <td className={`table-cell text-right clear-both py-4 break-all align-top font-medium`}>
+                                                    $ {total}
+                                                </td>
+                                            </tr>
+                                            <tr className={`cart_subtotal table-row`}>
+                                                <th className={`text-[18px] font-medium text-left break-all align-top py-4`}>Total ({totalItem})</th>
+                                                <td className={`table-cell text-right clear-both py-4 break-all align-top`}>
+                                                    <strong><span
+                                                        className={`text-[26px] font-medium text-lime-600`}>$ {total}</span></strong>
+                                                </td>
+                                            </tr>
                                         </tbody>
                                     </table>
                                     <div onClick={() => handleViewCheckout()}
-                                        className={`bg-dangerColor-default_2 text-whiteColor py-3 rounded-full text-center font-medium hover:bg-dangerColor-hover_2 duration-300 mt-6 cursor-pointer`}>
-                                        Procees to checkout
+                                         className={`bg-dangerColor-default_2 text-whiteColor py-3 rounded-full text-center font-medium hover:bg-dangerColor-hover_2 duration-300 mt-6 cursor-pointer`}>
+                                        Process to checkout
                                     </div>
                                 </div>
                             </div>

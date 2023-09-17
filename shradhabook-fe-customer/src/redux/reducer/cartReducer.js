@@ -2,7 +2,6 @@ import {ADD_PRODUCT_TO_CART, REMOVE_FROM_CART, ADJUST_QTY, REMOVE_ALL_ITEMS} fro
 
 const INITIAL_STATE = {
     cart: [], // {id, name, description, price, img, qty}
-    currentItem: null
 };
 
 const CartReducer = (state = INITIAL_STATE, action) => {
